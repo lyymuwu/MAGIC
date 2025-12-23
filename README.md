@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href=""><b>[Paper (PDF)]</b></a>
+  <a href="https://arxiv.org/abs/2512.19320"><b>[Paper]</b></a>
   ·
   <a href="#quick-start"><b>Quick Start</b></a>
   ·
