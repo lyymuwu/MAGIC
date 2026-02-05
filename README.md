@@ -229,3 +229,16 @@ Our implementation references the following repositories (thank you!):
 - TSV-M: https://github.com/AntoAndGar/task_singular_vectors
 - Iso-CTS: https://github.com/danielm1405/iso-merging
 
+
+## 📒 Citation
+
+If you find our work useful for your research, please consider citing the paper:
+
+```bash
+@article{li2025magic,
+  title={MAGIC: Achieving Superior Model Merging via Magnitude Calibration},
+  author={Li, Yayuan and Zhang, Jian and Guo, Jintao and Cheng, Zihan and Qi, Lei and Shi, Yinghuan and Gao, Yang},
+  journal={arXiv preprint arXiv:2512.19320},
+  year={2025}
+}
+```
