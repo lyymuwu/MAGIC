@@ -16,6 +16,14 @@
 
 ---
 
+## News
+
+- **2025-12-22**: Our paper was submitted to arXiv.
+- **2025-12-25**: Our paper was featured by the **我爱计算机视觉** WeChat official account. We sincerely thank them for the coverage:
+  <a href="https://mp.weixin.qq.com/s/HnEY8NQdR7_lRG8MndV-Rg"><img alt="Read the WeChat report" src="https://img.shields.io/badge/WeChat-Read%20the%20Report-07C160?style=for-the-badge&logo=wechat&logoColor=white"></a>
+
+---
+
 ## TL;DR
 
 **MAGIC** is a *training-free, plug-and-play* post-merging calibration framework that improves merged models by **calibrating layer-wise magnitudes** (in **feature space**, **weight space**, or **both**).
@@ -38,6 +46,7 @@ Current merging methods approximate specialised models (the “optimal reference
 ## Contents
 
 - [MAGIC: Achieving Superior Model Merging via Magnitude Calibration](#magic-achieving-superior-model-merging-via-magnitude-calibration)
+  - [News](#news)
   - [TL;DR](#tldr)
   - [Overview](#overview)
   - [Contents](#contents)
