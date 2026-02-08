@@ -320,8 +320,11 @@ def post_rectificationV2(args, Wts, Wm, layer_name, weak_comp=None):
         ratio, W_merged_scaled = spectral_norm_rectification(Wm, Wts)
     else:
         raise NotImplementedError("Space Not Implemented")
-    print(f"Layer: {layer_name}, ratio: {ratio.mean()}")
 
+    # handle nan ratio
+    if torch.isnan(ratio).any():
+        ratio = torch.where(torch.isnan(ratio), torch.ones_like(ratio), ratio)
+    print(f"Layer: {layer_name}, ratio: {ratio.mean()}")
 
     # Handle weight with pool scale stability
     if weak_comp is None:

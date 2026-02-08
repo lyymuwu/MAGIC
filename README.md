@@ -65,6 +65,7 @@ Current merging methods approximate specialised models (the “optimal reference
       - [TA + WSC / FSC / DSC](#ta--wsc--fsc--dsc)
       - [Iso-CTS + DSC (example)](#iso-cts--dsc-example)
     - [3) NLP (BERT)](#3-nlp-bert)
+    - [4) Diffusion (LoRA)](#4-diffusion-lora)
   - [Reproducibility](#reproducibility)
   - [FAQ](#faq)
   - [Acknowledgements](#acknowledgements)
@@ -201,6 +202,29 @@ Example (DSC):
 ```
 python main_BERT.py --merge Iso-CTS --space D
 ```
+
+### 4) Diffusion (LoRA)
+
+You can also use `main_LoRA.py` to merge LoRA modules for diffusion models.
+Currently, our LoRA setup is **one object LoRA + one style LoRA** merging.
+
+Before running:
+
+1. Put LoRA `.safetensors` files under the input directory used in `main_LoRA.py` (default: `/data/Lora`).
+2. In `main_LoRA.py`, set `model_object` as your object LoRA and `model_style` as your style LoRA (current pipeline expects exactly this pair).
+3. Update the output save path if needed (default: `/data/stable-diffusion-webui/models/Lora/`).
+
+Run examples:
+
+```bash
+# Task Arithmetic (no calibration)
+python main_LoRA.py --merge TA --space N
+
+# + Weight Space Calibration (WSC)
+python main_LoRA.py --merge TA --space W
+```
+
+Note: For LoRA merging, `main_LoRA.py` currently supports `--space N` and `--space W` only, under the current one-object + one-style fusion setting.
 
 
 
